@@ -1,0 +1,6 @@
+[default]
+screenshot_directory = "~/Pictures"
+copy_to_clipboard = true
+border = true
+border_thickness = 2
+border_color = "#ff79c6"

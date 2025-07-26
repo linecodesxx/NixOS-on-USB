@@ -1,0 +1,15 @@
+2025-07-26 12:56:36.435 [info] update#setState idle
+2025-07-26 12:57:05.303 [info] update#setState checking for updates
+2025-07-26 12:57:05.384 [info] update#setState available for download
+2025-07-26 13:23:08.872 [info] Extension host with pid 8874 exited with code: 0, signal: unknown.
+2025-07-26 13:23:08.918 [error] [storage state.vscdb] prepare(): Error: SQLITE_READONLY_DBMOVED: attempt to write a readonly database (INSERT INTO ItemTable VALUES (?,?),(?,?)). Details: Keys: __$__targetStorageMarker, lifecyle.lastShutdownReason Length: 1482
+2025-07-26 13:23:08.918 [error] [storage state.vscdb] prepare(): Error: SQLITE_READONLY_DBMOVED: attempt to write a readonly database (INSERT INTO ItemTable VALUES (?,?)). Details: Keys: editorFontInfo Length: 499
+2025-07-26 13:23:08.919 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 8843]: crashed with code 15 and reason 'killed'
+2025-07-26 13:23:08.922 [error] Error: ENOENT: no such file or directory, unlink '/home/linecodesx/.config/Code/User/workspaceStorage/1753509716146/state.vscdb'
+    at async Object.unlink (node:internal/fs/promises:1062:10)
+    at async o6.y (file:///nix/store/x4jnwwpa28sa9rcdprrkc1cy6bbc54lh-vscode-1.102.1/lib/vscode/resources/app/out/main.js:35:64379)
+    at async ad.w (file:///nix/store/x4jnwwpa28sa9rcdprrkc1cy6bbc54lh-vscode-1.102.1/lib/vscode/resources/app/out/main.js:35:86882)
+    at async ad.close (file:///nix/store/x4jnwwpa28sa9rcdprrkc1cy6bbc54lh-vscode-1.102.1/lib/vscode/resources/app/out/main.js:35:86306)
+    at async Promise.all (index 2)
+    at async Object.e [as settled] (file:///nix/store/x4jnwwpa28sa9rcdprrkc1cy6bbc54lh-vscode-1.102.1/lib/vscode/resources/app/out/main.js:30:85040)
+    at async file:///nix/store/x4jnwwpa28sa9rcdprrkc1cy6bbc54lh-vscode-1.102.1/lib/vscode/resources/app/out/main.js:35:58787
