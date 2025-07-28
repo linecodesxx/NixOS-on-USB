@@ -15,6 +15,7 @@
   in {
     nixosConfigurations."line-usb" = nixpkgs.lib.nixosSystem {
       inherit system;
+
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
@@ -43,11 +44,11 @@
         nodePackages.pnpm
 
         # Frameworks
-        nodePackages.vite
-        nodePackages.next
-        nodePackages.create-react-app
-        nodePackages.vue-cli
         nodePackages.typescript
+	
+	# Rust
+	rustc
+	cargo
 
         # Tools
         git
@@ -56,18 +57,19 @@
       ];
 
       shellHook = ''
-        echo "=== 🚀 Development shell ready ==="
+        echo "=== 🚀 Web Dev Shell ==="
         echo "Python: $(python3 --version)"
         echo "Node: $(node --version)"
         echo "npm: $(npm --version)"
         echo ""
-        echo "Available commands:"
-        echo "  pyenv - Create Python virtualenv"
-        echo "  npminit - Start new Vite project"
-        echo ""
-        alias pyenv="python3 -m venv .venv && source .venv/bin/activate"
-        alias npminit="npm init vite@latest"
+        echo "Доступные команды:"
+        echo "  create-vite - Создать новый Vite проект"
+        echo "  create-next - Создать Next.js проект"
+        echo "  create-react - Создать React проект"
+        alias create-vite="npm create vite@latest"
+        alias create-next="npm create next-app"
+        alias create-react="npm create react-app"
       '';
-    };
+      };
   };
 }
