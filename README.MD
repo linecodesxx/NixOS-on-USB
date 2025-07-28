@@ -1,7 +1,7 @@
 # Nix Dev Flake.
 
 ## So, what is this?
-This is my own flake config to build an "easy-going lightweight nix develop". It has more neccessary applications like. To use for developping, it has installed `python`, `nodejs`, etc.
+This is my own flake config to build an "easy-going lightweight nix develop". It has more neccessary applications to use for developping, it has installed `python`, `nodejs`, etc.
 
 ## Installing
 
