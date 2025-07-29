@@ -11,9 +11,14 @@
   in {
     nixosConfigurations."line-usb" = nixpkgs.lib.nixosSystem {
       inherit system;
-
       specialArgs = { inherit inputs; };
-    # Добавляем devShell для разработки
+      modules = [
+        # You need to include your NixOS configuration modules here
+        /etc/nixoos/configuration.nix
+      ];
+    };
+
+    # Move devShells outside of nixosConfigurations
     devShells.${system}.default = pkgs.mkShell {
       name = "web-dev";
 
@@ -31,10 +36,10 @@
 
         # Frameworks
         nodePackages.typescript
-	
-	      # Rust
-	      rustc
-	      cargo
+        
+        # Rust
+        rustc
+        cargo
 
         # Tools
         git
@@ -56,6 +61,6 @@
         alias create-next="npm create next-app"
         alias create-react="npm create react-app"
       '';
-      };
+    };
   };
 }
